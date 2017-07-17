@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>My first Python app!</title>
+  </head>
+
+  <body>
+    {% if name %}
+      <p> You,{{name}}, you are awesome! </p>
+    {% else %}
+      <p> Don't know your name girl! </p>
+    {% endif %}
+
+
+		<form method="post" action="/sign_up">
+			First name:<br>
+			<input type="text" name="first_name" placeholder="Enter your name">
+			<br><br>
+      Email: </br>
+      <input type="email" name="email_address" required="required">
+			<input type="submit" value="Submit">
+		</form> 
+  </body>
+</html>
