@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-import requests
+# import requests
 
 app = Flask("MyApp")
 
@@ -22,13 +22,13 @@ def send_message():
   name = request.form["first_name"]
   print email
   print name
-  return requests.post(
-		"https://api.mailgun.net/v3/[YOURDOMAINNAME]/messages",
-		auth={"api", "[YOUR_API_KEY]"},
-		data={"from": "Merve <cfg@merve.com>",
-					"to": email,
-					"subject": "Hi!",
-					"text": "Hello {}, thank you for signing up!".format(name)})
+  # return requests.post(
+	# 	"https://api.mailgun.net/v3/[YOURDOMAINNAME]/messages",
+	# 	auth={"api", "[YOUR_API_KEY]"},
+	# 	data={"from": "Merve <cfg@merve.com>",
+	# 				"to": email,
+	# 				"subject": "Hi!",
+	# 				"text": "Hello {}, thank you for signing up!".format(name)})
 
 @app.route("/whoruntheworld/<name>")
 def girls(name=None):
