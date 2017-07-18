@@ -34,5 +34,6 @@ def send_message():
 def girls(name=None):
   return render_template("hello.html", name=name)
 
-app.run(debug=True)
+if __name__ == '__main__':
+  app.run(debug=True)
 
